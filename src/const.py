@@ -1,0 +1,31 @@
+from enum import Enum
+
+TDS_NUM_RESULTS = 30
+TDS_QA_NUM_RESULTS = 10
+TDS_QA_NUM_READER = 3
+TDS_KEYWORD_SEARCH_ENDPOINT = "http://18.188.152.226:8001/tds_keyword_search"
+TDS_DPR_SEARCH_ENDPOINT = "http://18.188.152.226:8001/tds_dpr_search"
+TDS_MIX_SEARCH_ENDPOINT = "http://18.188.152.226:8001/tds_mixed_search"
+TDS_QA_ENDPOINT = "http://18.188.152.226:8001/tds_qa_search"
+WIKIFIER_ENDPOINT = "http://13.59.84.78:8001/wikifier"
+WIKIFIER_THRESHOLD = 0.8
+
+RESTAURANT_NUM_RESULTS = 30
+RESTAURANT_SEARCH_ENDPOINT = "http://18.217.36.47:8001/res_keyword_search"
+
+
+class TDSSearchEngineType(Enum):
+    BM_25 = 1
+    DPR = 2
+    MIX = 3
+
+
+class QueryType(Enum):
+    EXPLORE_QUERY = 1
+    OPEN_QUERY = 2
+    SEARCH_QUERY = 3
+    INVALID_QUERY = 4
+    EMPTY_QUERY = 5
+    RES_SEARCH_QUERY = 6
+    RES_EXPLORE_QUERY = 7
+    RES_OPEN_QUERY = 8
